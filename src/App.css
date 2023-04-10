@@ -130,10 +130,9 @@ a {
   }
 }
 
-@media only screen and (max-width:425px) {
+@media screen and (min-width:360px) and (max-width: 414px){
   .mdef {
-    max-width: 395px;
+    width: 584px;
     margin: 0 auto;
   }
 }
-

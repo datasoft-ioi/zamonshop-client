@@ -59,6 +59,7 @@ const Home = () => {
 
     // }, []);
     return (
+
         <Helmet title="Asosiy">
             <div className="Hero">
             <IndividualIntervalsExample />

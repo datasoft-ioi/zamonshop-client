@@ -376,10 +376,20 @@ header .hederCategory {
 }
 
 @media screen and (min-width: 360px) and (max-width: 414px){
+    .mdef {
+        width: 100%;
+    }
+    .layuotmain {
+        width: 100%;
+    }
+    .header {
+        width: 100%;
+    }
     .nav-wrapper {
         width: 100%;
         display: flex;
         position: relative;
+        justify-content: space-between;
     }
     .navigation {
         width: 100%;
@@ -389,11 +399,21 @@ header .hederCategory {
         position: absolute;
         top: 50px;
         background-color: #ffffff;
+        justify-content: space-between;
+        padding-right: 13%;
+        align-items: center;
     }
     header .hederCategory {
         display: none;
     }
     .w20 {
         height: auto;
+    }
+
+    .categoryBtn span{
+        display: none;
+    }
+    .navigation .navsearch {
+       
     }
 }
