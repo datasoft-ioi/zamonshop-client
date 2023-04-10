@@ -414,6 +414,18 @@ header .hederCategory {
         display: none;
     }
     .navigation .navsearch {
-       
+        width: 90%;
+    }
+
+    .categorys {
+        top: 95px;
+        flex-direction: column;
+        height: 110vh;
+    }
+    .categoryList {
+        width: 100%;
+    }
+    .categoryProducts {
+        
     }
 }
