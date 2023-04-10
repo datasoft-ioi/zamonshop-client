@@ -1,0 +1,223 @@
+.checkOut {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.Kabinet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 1440px;
+    margin: 80px auto;
+}
+
+.kabinetRegiser{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+}
+.registerTel{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+}
+.registerTitle{
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    color: #3C3C3C;
+}
+.inputFic{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;}
+
+.inputFicPhone{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    border: 1px solid #826d6035;
+    border-radius: 4px;
+    padding: 20px 7px;
+    width: 80%;
+}
+
+.ZakazSelects {
+    margin-top: 20px;
+}
+
+.inputFic span{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    color: #636363;
+}
+.userInfo{
+    display: flex;
+    border: 1px solid #826d6035;
+    border-radius: 4px;
+    padding: 20px 7px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.input{
+    width: 270px;
+    height: 50px;
+    left: 510px;
+    top: 371px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+    padding: 20px;
+}
+.telInput{
+    width: 560px;
+    height: 50px;
+    left: 510px;
+    top: 267px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+}
+.saveButton{
+    width: 560px;
+    height: 50px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #FFFFFF;
+    background: rgb(255, 115, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+
+.ZakazSelects {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.custom-select {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: Arial;
+  }
+  
+  select {
+    width: 260px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+    color: #8f8f8f;
+  }
+
+.input::placeholder {
+    font-size: 12px;
+}
+
+.infoContact {
+    font-size: 10px;
+    font-family: 'Inter';
+    width: 100%;
+}
+
+.shortInfo {
+    border: 1px solid #33333351;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 5px;
+}
+
+.shortInfo span {
+    display: flex;
+    gap: 10px;
+}
+
+.check {
+    width: 20px;
+}
+
+.shortInfodes {
+    font-size: 13px;
+    font-family: 'inter';
+    color: #000000b9;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 375px){
+    .Kabinet{
+        gap: 20px;
+        max-width: 420px;
+        margin: 20px auto;
+    }
+
+    .kabinetRegiser{
+        max-width: 375px;
+        padding: 20px 10px;
+
+}
+    .registerTitle{
+       font-size: 20px;
+    }
+
+    .inputFic{
+        gap: 5px;
+        width: 260px;
+    }
+
+    .inputFic span{
+        font-size: 13px;
+    }
+
+    .userInfo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .input{
+        width: 180px;
+        height: 35px;
+        padding: 5px;
+    }
+
+    .saveButton{
+        width: 250px;
+        height: 40px;
+        font-weight: 500;
+        margin: 35px auto;
+    }
+
+    .ZakazSelects {
+        flex-direction: column;
+
+        justify-content: center;
+        gap: 25px;
+        align-items: flex-start;
+    }
+
+}
