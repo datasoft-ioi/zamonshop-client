@@ -6,7 +6,7 @@ import Card3 from './1.png'
 function IndividualIntervalsExample() {
   return (
     <Carousel className='w-100'>
-      <Carousel.Item interval={100} className="">
+      <Carousel.Item interval={100} className=" ">
         <img
           className="d-block w-100 rounded"
           src={Card3}
