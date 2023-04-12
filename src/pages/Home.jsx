@@ -10,14 +10,14 @@ import '../styles/home.css'
 import axios from 'axios';
 const url = "https://api.zamonshop.uz/api/v1"
 const Home = () => {
-    const [products , setProducts] = useState([])
+    const [products, setProducts] = useState([])
     useEffect(() => {
         axios
-        .get(url)
-        .then(data => {
-            console.log(data.data);
-        })
-    },[]);
+            .get(url)
+            .then(data => {
+                console.log(data.data);
+            })
+    }, []);
     const [trendingProducts, setTrendingProducts] = useState([])
     const [wirlessProducts, setWirlessProducts] = useState([])
     const [mobileProducts, setMobileProducts] = useState([])
@@ -62,14 +62,13 @@ const Home = () => {
 
         <Helmet title="Asosiy">
             <div className="Hero">
-            <IndividualIntervalsExample />
-
+                <IndividualIntervalsExample />
             </div>
             <div className='Services'>
             </div>
             <section className='trending-products'>
                 <h2 className="section-title"><span>Ko'p sotilganlar</span>  <img src={Vector} /></h2>
-                <ProductList/>
+                <ProductList />
             </section>
             <div className="Hero">
                 <IndividualIntervalsExample />
