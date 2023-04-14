@@ -7,6 +7,8 @@ import Checkout from '../pages/Checkout'
 import Login from '../pages/Login'
 import SignUp from '../pages/Signup'
 import product from '../assets/data/products'
+import ProductList from '../pages/ProductList';
+import ProductLists from '../pages/ProductList';
 function Routers() {
     return <Routes>
         {/* <Route path='' element={Navigate} to='home'/> */}
@@ -17,7 +19,7 @@ function Routers() {
         <Route path='checkout' element={<Checkout/>} />
         <Route path='login' element={<Login/>} />
         <Route path='signup' element={<SignUp/>} />
-
+        <Route path='productList' element={<ProductLists/>} />
     </Routes>;
 }
 
