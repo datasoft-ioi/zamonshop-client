@@ -15,6 +15,7 @@ import blender from '../../img/blender.png'
 import Kiyimlar from '../../img/kiyim.png'
 import logo from '../../img/logo.png'
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const nav__link = [
   {
@@ -43,11 +44,12 @@ const Header = ({ setProductsData }) => {
   }
 
   const [categories, setCategories] = useState([]);
+  const [headerCat, setHeaderCat] = useState([])
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/products/cat/categories/')
+    axios.get('https://api.zamonshop.uz/categories/')
       .then(response => {
-        setCategories(response.data);
+        setHeaderCat(response.data);
       })
       .catch(error => {
         console.log(error);
@@ -109,15 +111,11 @@ const Header = ({ setProductsData }) => {
         </div>
       </div>
       <ul className="hederCategory">
-        <li>Atrlar</li>
-        <li>Kiyimlar</li>
-        <li>Texnika</li>
-        <li>Telefonlar</li>
-        <li>Salomatlik</li>
-        <li>Bolalar Uchun</li>
-        <li>Kattalar Uchun</li>
-        <li>Maishiy Texnika</li>
-        <li>Avtombilar Uchun</li>
+        {headerCat.map(item => (
+          <li key={item.id}>
+            <Link to={`productList/products/${item.id}`}>{item.name}</Link>
+          </li>
+        ))}
       </ul>
       <div className={categoryOnOf}>
         <ul className="categoryList">
