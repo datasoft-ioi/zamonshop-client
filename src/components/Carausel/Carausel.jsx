@@ -13,21 +13,6 @@ function IndividualIntervalsExample() {
           alt="First slide"
         />
       </Carousel.Item>
-      <Carousel.Item interval={500} className="w20">
-        <img
-          className="d-block w-100 "
-          src={Card}
-          alt="Second slide"
-        />
-  
-      </Carousel.Item>
-      <Carousel.Item className="w20"> 
-        <img
-          className="d-block w-100"
-          src={Card2}
-          alt="Third slide"
-        />
-      </Carousel.Item>
     </Carousel>
   );
 }
