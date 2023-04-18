@@ -112,7 +112,7 @@ const Header = ({ setProductsData }) => {
       <ul className="hederCategory">
         {headerCat.map(item => (
           <li key={item.id}>
-            <Link to={`productList/products/${item.id}`}>{item.name}</Link>
+            <Link to={`productList`}>{item.name}</Link>
           </li>
         ))}
       </ul>
