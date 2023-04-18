@@ -57,10 +57,10 @@ const Header = ({ setProductsData }) => {
   }, []);
 
 
-  const [categoryOnOf, setCategoryOnOf] = useState('categorys none')
+  const [categoryOnOf, setCategoryOnOf] = useState('')
 
   const menuRef = useRef(null)
-  const menuToggle = () => menuRef.current.classList.toggle('active__menu')
+  const menuToggle = () => menuRef.current.classList.toggle('')
   const totalQuantity = useSelector(state => state.cart.totalQuantity)
   return (
     <header className="header">
@@ -70,15 +70,14 @@ const Header = ({ setProductsData }) => {
             <img src={logo} className='logoimg' />
           </div>
         </NavLink>
-        <div className="navigation " ref={menuRef} onClick={menuToggle}>
-          <button onClick={
-            () => categoryOnOf == 'categorys none' ? setCategoryOnOf('categorys')
-              : setCategoryOnOf('categorys none')
-          }
-            className="categoryBtn">
-            <TbCategory2 className="categoryIcon" />
-            <span>Kategory</span>
-          </button>
+        <div className="navigation ">
+          <Link to={'productList'}>
+            <button 
+              className="categoryBtn">
+              <TbCategory2 className="categoryIcon" />
+              <span>Kategory</span>
+            </button>
+          </Link>
           <div className="navsearch">
             <input type="text" placeholder="Izlash..." />
             <button><BiSearchAlt2 /></button>

@@ -14,8 +14,7 @@ export default function ProductLists() {
         }
         setProducts();
     }, [])
-
-
+    
     return (
         <>
             <div className="productLists">
