@@ -8,8 +8,8 @@ export default function ProductLists() {
 
     useEffect(() => {
         const setProducts = async () => {
-            const response = await axios.get('https://api.zamonshop.uz/products/')
-            setProduct(response.data)
+            const response = await axios.get('https://api.zamonshop.uz/products/?cat_id=3')
+            setProduct(response.data);
             console.log(response.data);
         }
         setProducts();

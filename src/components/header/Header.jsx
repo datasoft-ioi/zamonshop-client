@@ -31,9 +31,9 @@ const nav__link = [
     display: 'Sotib Olish'
   },
 ]
+const url = 'products/?cat_id='
 
-
-const Header = ({ setProductsData }) => {
+const Header = ({ setProductsData , productUrl , setProductUrl}) => {
 
   const handleSearch = e => {
     const searchTerm = e.target.value
@@ -71,10 +71,11 @@ const Header = ({ setProductsData }) => {
           </div>
         </NavLink>
         <div className="navigation ">
-          <Link to={'productList'}>
+          <Link to='productList'>
             <button 
+              onClick={() => setProductUrl('productList')}
               className="categoryBtn">
-              <TbCategory2 className="categoryIcon" />
+              <TbCategory2 className="categoryIcon" />  
               <span>Kategory</span>
             </button>
           </Link>
@@ -111,8 +112,8 @@ const Header = ({ setProductsData }) => {
       </div>
       <ul className="hederCategory">
         {headerCat.map(item => (
-          <li key={item.id}>
-            <Link to={`productList`}>{item.name}</Link>
+          <li key={item.id} onClick={() => setProductUrl(url + item.id)} >
+            <Link to={url + item.id}>{item.name}</Link>
           </li>
         ))}
       </ul>

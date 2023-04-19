@@ -7,11 +7,13 @@ import products from '../../assets/data/products';
 import { useState } from 'react';
 function Layout() {
     const [productsData, setProductsData] = useState(products)
+    const [productUrl , setProductUrl] = useState()
+
     return ( 
         <div className='mdef'>
-        <Header setProductsData={setProductsData} productsData={productsData}/>
+        <Header setProductsData={setProductsData} productsData={productsData} setProductUrl={setProductUrl} productUrl={productUrl}/>
         <div>
-            <Routers Route={parsePath}/>
+            <Routers Route={parsePath} productUrl={productUrl}/>
         </div>
         <Footer/>
         </div>

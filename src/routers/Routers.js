@@ -11,7 +11,7 @@ import ProductList from '../pages/ProductList';
 import ProductLists from '../pages/ProductList';
 import notFound from '../pages/notFound';
 
-function Routers() {
+function Routers({productUrl}) {
     return <Routes>
         {/* <Route path='' element={Navigate} to='home'/> */}
         <Route path='*' element={<notFound/>} />
@@ -22,7 +22,7 @@ function Routers() {
         <Route path='checkout' element={<Checkout/>} />
         <Route path='login' element={<Login/>} />
         <Route path='signup' element={<SignUp/>} />
-        <Route path='productList' element={<ProductLists/>} />
+        <Route path={productUrl} element={<ProductLists/>} />
     </Routes>;
 }
 
