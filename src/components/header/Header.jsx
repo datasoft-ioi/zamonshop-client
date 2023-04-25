@@ -2,20 +2,14 @@ import React, { useRef, useEffect, useState } from "react";
 import "./header.css";
 import { NavLink } from "react-router-dom"
 import { useSelector } from "react-redux";
-import Logo from '../../assets/images/logotip.png'
 import products from "../../assets/data/products"
 import { BiSearchAlt2 } from 'react-icons/bi'
 import { TbCategory2 } from 'react-icons/tb'
 import { BsChevronRight } from 'react-icons/bs'
-import elektronika from '../../img/elektronika.png'
-import book from '../../img/book.png'
-import sport from '../../img/sport.png'
-import car from '../../img/car.png'
-import blender from '../../img/blender.png'
-import Kiyimlar from '../../img/kiyim.png'
 import logo from '../../img/logo.png'
 import axios from "axios";
 import { Link } from "react-router-dom";
+import usericon from './usericon.png'
 
 const nav__link = [
   {
@@ -33,7 +27,7 @@ const nav__link = [
 ]
 const url = 'products/?cat_id='
 
-const Header = ({ setProductsData , productUrl , setProductUrl}) => {
+const Header = ({ setProductsData , productUrl , setProductUrl , setIsOpen , isOpen}) => {
 
   const handleSearch = e => {
     const searchTerm = e.target.value
@@ -90,12 +84,16 @@ const Header = ({ setProductsData , productUrl , setProductUrl}) => {
               <i class="ri-home-line"></i>
             </span>
           </NavLink> */}
-          <NavLink to="/shop">
-            <span className="fav-icon" to="cart">
-              <i class="ri-shopping-bag-line" to={nav__link.path}></i>
-              <span className="korzina korzinanone">Все товары</span>
+        
+            <span className="fav-icon" to="cart" 
+              onClick={
+                () => setIsOpen('loginClose')
+              }
+            >
+              <img style={{width: '25px'}} src={usericon} alt="" />
+              <span className="korzina korzinanone">Kirish</span>
             </span>
-          </NavLink>
+        
           <NavLink to="/cart">
             <span className="cart-icon">
               <i class="ri-shopping-cart-line"></i>
