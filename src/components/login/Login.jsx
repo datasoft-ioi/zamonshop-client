@@ -13,7 +13,8 @@ export default function Login({ isOpen, setIsOpen }) {
                     </select>
                     <input type="tel" placeholder='91 311 11 12' />
                 </div>
-                <button>KIRISH</button>
+                <button className='login_userInfosBTN'>KIRISH</button>
+                <button className='mClose' onClick={() => setIsOpen('loginClose closeLogin')}>X</button>
             </div>
         </>
     )
